@@ -1,26 +1,26 @@
 {
-  "name": "angular-store",
+  "name": "store",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/angular-store/src",
+  "sourceRoot": "apps/store/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/angular-store",
-        "browser": "apps/angular-store/src/main.ts",
+        "outputPath": "dist/apps/store",
+        "browser": "apps/store/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/angular-store/tsconfig.app.json",
+        "tsConfig": "apps/store/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/angular-store/public"
+            "input": "apps/store/public"
           }
         ],
-        "styles": ["apps/angular-store/src/styles.css"]
+        "styles": ["apps/store/src/styles.css"]
       },
       "configurations": {
         "production": {
@@ -51,10 +51,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "angular-store:build:production"
+          "buildTarget": "store:build:production"
         },
         "development": {
-          "buildTarget": "angular-store:build:development"
+          "buildTarget": "store:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -62,7 +62,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "angular-store:build"
+        "buildTarget": "store:build"
       }
     },
     "lint": {
@@ -72,8 +72,8 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "angular-store:build",
-        "staticFilePath": "dist/apps/angular-store/browser",
+        "buildTarget": "store:build",
+        "staticFilePath": "dist/apps/store/browser",
         "spa": true
       }
     }

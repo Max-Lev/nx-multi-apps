@@ -432,7 +432,7 @@ import { CommonModule } from '@angular/common';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome angular-store 👋
+            Welcome store 👋
           </h1>
         </div>
         <!--  HERO  -->
@@ -801,7 +801,7 @@ nx run-many -t build test lint</pre>
               </svg>
               View project details
             </summary>
-            <pre>nx show project angular-store</pre>
+            <pre>nx show project store</pre>
           </details>
 
           <details>
